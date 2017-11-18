@@ -1,0 +1,7 @@
+#Sat Nov 18 14:45:40 CET 2017
+base.0=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dfcca9fb2b3906ca38898298f8e5734e7571bbda
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5aed74324f9e20729b59376da7aedab4aeb77a64/classes.dex
+base.1=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5aed74324f9e20729b59376da7aedab4aeb77a64
+file.0=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dfcca9fb2b3906ca38898298f8e5734e7571bbda/classes.dex

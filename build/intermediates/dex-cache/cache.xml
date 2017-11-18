@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1cef65a26693fc6c449d7dfa5d92c1e073f04ef1">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5aed74324f9e20729b59376da7aedab4aeb77a64/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.8.1_9da95eca96de7477a066025670aaa261d2c6bf14/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/b8258a95b27c94a985082d69a9071fa92cfbda4f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_27f525620ab95f5f3a071a840b559a5f561be6f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/c2eae9f8ad4221741755076d1e6e9bf3e6bbfc02/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b2608308c2f08f4aa84a451268ae5deb400f40b4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dfcca9fb2b3906ca38898298f8e5734e7571bbda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/ab905eba2d7ae6311431d74aefc12c0b6805fd96/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8d2f243ea4df00bad8bc59d4aefc7145a135477c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/d6231844b5e1da7ab625bbf2099c114a4e2426bb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a2bcb61342d09fe9acf55c9daf63961c8866cc0">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3ba0bbec56e5c4abd26a7c72cb825187ea9f0dc9/classes.dex" />
+    </item>
+
+</items>
