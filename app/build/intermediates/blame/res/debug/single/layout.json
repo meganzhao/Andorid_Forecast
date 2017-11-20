@@ -4,12 +4,12 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
@@ -56,12 +56,12 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/notification_template_icon_group.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
@@ -106,6 +106,10 @@
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/content_main.xml",
+        "source": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/res/layout/content_main.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
@@ -156,12 +160,12 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/notification_action.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_screen_simple.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/b8258a95b27c94a985082d69a9071fa92cfbda4f/output/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_screen_simple.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
@@ -192,12 +196,12 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_action_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_action_menu_item_layout.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
@@ -216,11 +220,11 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/b8258a95b27c94a985082d69a9071fa92cfbda4f/output/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/layout/abc_popup_menu_item_layout.xml"
     }
 ]

@@ -1,4 +1,4 @@
-#Sat Nov 18 14:14:44 CET 2017
+#Mon Nov 20 11:16:28 CET 2017
 file.2=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c1d15e755e2cfc75b72b8210c8e4f59e1992884/classes.dex
 base.2=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c1d15e755e2cfc75b72b8210c8e4f59e1992884
 file.1=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_73f7091bb8915c01fc99192cd7b69d11c7b6dc7b/classes.dex
