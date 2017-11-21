@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Forecast</string>
     <string name="country_name">Country Name</string>
-    <string name="dislogue_title">Which city\'s weather would you like to see?</string>
-    <string name="dislogue_positive_botton">OK</string>
-    <string name="dislogue_negative_button">Cancel</string>
+    <string name="dislog_title">Which city\'s weather would you like to see?</string>
+    <string name="dislog_positive_botton">OK</string>
+    <string name="dislog_negative_button">Cancel</string>
 </resources>

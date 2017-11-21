@@ -3,42 +3,89 @@ package hu.ait.android.forecast;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import hu.ait.android.forecast.adapter.RecyclerAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+    implements NavigationView.OnNavigationItemSelectedListener{
+
+    private RecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ((WeatherApplication)getApplication()).openRealm();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvList);
+        adapter = new RecyclerAdapter(this,
+                ((WeatherApplication)getApplication()).getRealm());
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setAdapter(adapter);
+
     }
 
     @OnClick(R.id.fabAdd)
-    void createAlertDialog() {
-        final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(getString(R.string.dislogue_title));
-        alertDialog.setContentView(R.layout.alert_dialogue);
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.dislogue_positive_botton), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+    void showDialog() {
+        createAlertDialog();
+    }
 
-            }
-        });
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.dislogue_negative_button), new DialogInterface.OnClickListener() {
+    private void createAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.dislog_title));
+        final EditText input = new EditText(MainActivity.this);
+        //View alertView = getLayoutInflater().inflate(R.layout.alert_dialog, null);
+        builder.setView(input);
+        builder.setPositiveButton(R.string.dislog_positive_botton, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                alertDialog.dismiss();
+            public void onClick(DialogInterface dialog, int which) {
+                adapter.addCity(input.getText().toString());
             }
         });
-        alertDialog.show();
+        builder.setNegativeButton(R.string.dislog_negative_button, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
+    }
+
+    protected void onDestroy(){
+        ((WeatherApplication)getApplication()).closeRealm();
+        super.onDestroy();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_addCity){
+            createAlertDialog();
+        }
+        if (id == R.id.nav_about){
+
+        }
+        return true;
     }
 }

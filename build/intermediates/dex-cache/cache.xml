@@ -7,8 +7,26 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="b3dd97dcc6e237d5e25f03e74d74ed4970458e67">
+        sha1="ed79b7d3ca452c85bb0105719ab6475188738222">
         <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5aed74324f9e20729b59376da7aedab4aeb77a64/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/74ee2a409d2ae0e2886f446e8a2de3ca8a1b3138/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b64dd5f01bc37de289f90fd59299b0c76d119611">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2f2324fad7affebe592e70faa3b0c501f9cae45e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/3.0.0/32a01bbb8cb421b6d53d7a102412142b0391c8c7/realm-annotations-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="32a01bbb8cb421b6d53d7a102412142b0391c8c7">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/realm-annotations-3.0.0_6cc8a970c80432cd12efff6cd5a7735031815201/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +36,15 @@
         revision="26.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dfcca9fb2b3906ca38898298f8e5734e7571bbda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhaozhaoxia/.android/build-cache/b855f728f3d98645a0442b7e654d319794da509c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="aed23c739ad564efb5193b88bc785868f7de878b">
+        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bb58881f3125ecdd321dd5b22608b396237d4fb9/classes.dex" />
     </item>
 
 </items>
