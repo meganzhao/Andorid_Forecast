@@ -1,6 +1,7 @@
 package hu.ait.android.forecast.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import hu.ait.android.forecast.MainActivity;
 import hu.ait.android.forecast.R;
+import hu.ait.android.forecast.WeatherScreen;
 import hu.ait.android.forecast.data.CityWeather;
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -46,8 +49,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        CityWeather cityWeatherData = cityWeatherList.get(position);
+        final CityWeather cityWeatherData = cityWeatherList.get(position);
         holder.tvCityName.setText(cityWeatherData.getCityName());
+
+        holder.tvCityName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, WeatherScreen.class);
+                intent.putExtra("cityName",cityWeatherData.getCityName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     public void addCity(String cityName){

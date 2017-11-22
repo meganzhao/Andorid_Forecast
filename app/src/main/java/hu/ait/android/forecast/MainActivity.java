@@ -1,6 +1,7 @@
 package hu.ait.android.forecast;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,8 +14,12 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hu.ait.android.forecast.adapter.RecyclerAdapter;
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener{
 
     private RecyclerAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +48,6 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setAdapter(adapter);
-
     }
 
     @OnClick(R.id.fabAdd)
@@ -54,7 +59,6 @@ public class MainActivity extends AppCompatActivity
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getString(R.string.dislog_title));
         final EditText input = new EditText(MainActivity.this);
-        //View alertView = getLayoutInflater().inflate(R.layout.alert_dialog, null);
         builder.setView(input);
         builder.setPositiveButton(R.string.dislog_positive_botton, new DialogInterface.OnClickListener() {
             @Override

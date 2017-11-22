@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml
@@ -13,8 +13,12 @@ ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManife
 	android:versionCode
 		INJECTED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:5:5-20:19
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:7:5-23:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/zhaozhaoxia/.android/build-cache/43e9c78fd40b0ae4b3c327a3a348d14dbc250edd/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/zhaozhaoxia/.android/build-cache/b8258a95b27c94a985082d69a9071fa92cfbda4f/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/AndroidManifest.xml:29:5-20
@@ -28,33 +32,37 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/zhaozhaox
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/zhaozhaoxia/.android/build-cache/c2280c777f573ec8815865ff0a4343f1c6c47e74/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/zhaozhaoxia/.android/build-cache/c614025016617d66b5039ba94495c953311f73f2/output/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:11:9-41
 	android:supportsRtl
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:10:9-54
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:12:9-54
 	android:allowBackup
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:12:9-40
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:6:9-43
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:8:9-43
 activity#hu.ait.android.forecast.MainActivity
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:13:19-47
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:15:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:19:27-74
+activity#hu.ait.android.forecast.WeatherScreen
+ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:22:9-60
+	android:name
+		ADDED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml:22:19-48
 uses-sdk
 INJECTED from /Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [io.realm:realm-android-library:3.0.0] /Users/zhaozhaoxia/.android/build-cache/b855f728f3d98645a0442b7e654d319794da509c/output/AndroidManifest.xml:7:5-9:41
