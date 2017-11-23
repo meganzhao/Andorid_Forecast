@@ -6,7 +6,7 @@
     density="hdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1511365448250"
+    timestamp="1511452331559"
     token="1491212448269462509"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -29,8 +29,11 @@
 
     <build
         build-mode="FULL"
-        timestamp="1511364825573"
+        timestamp="1511451975713"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
@@ -56,21 +59,18 @@
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1511365448250"
+        timestamp="1511452331559"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"

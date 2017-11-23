@@ -3,20 +3,11 @@
 
     <item
         is-multidex="true"
-        jar="/Users/zhaozhaoxia/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_827646011ea5934037a4c54e1d3679906cfe25cf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="e3c54d73ee8cd4bb4a7529e25b00aa83367f3619">
+        sha1="80c9cf48fa62170b4c8767136a6708202f822714">
         <dex dex="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5aed74324f9e20729b59376da7aedab4aeb77a64/classes.dex" />
     </item>
     <item

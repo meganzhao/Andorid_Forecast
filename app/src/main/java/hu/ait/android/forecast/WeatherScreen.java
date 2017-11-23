@@ -7,12 +7,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hu.ait.android.forecast.chart.MyXAxisValueFormatter;
+import hu.ait.android.forecast.data.ForecastResult;
 import hu.ait.android.forecast.data.WeatherResult;
+import hu.ait.android.forecast.network.ForecastAPI;
 import hu.ait.android.forecast.network.WeatherAPI;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,10 +49,10 @@ public class WeatherScreen extends AppCompatActivity {
     TextView tvTemp_max;
     @BindView(R.id.tvWeatherMain)
     TextView tvWeatherMain;
-//    @BindView(R.id.tvCoord_lat)
-//    TextView tvCoord_lat;
-//    @BindView(R.id.tvCoord_lon)
-//    TextView tvCoord_lon;
+    @BindView(R.id.tvCoord_lat)
+    TextView tvCoord_lat;
+    @BindView(R.id.tvCoord_lon)
+    TextView tvCoord_lon;
 
 //    @BindView(R.id.tvPressure)
 //    TextView tvPressure;
@@ -64,10 +80,17 @@ public class WeatherScreen extends AppCompatActivity {
                 .baseUrl("http://api.openweathermap.org")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        WeatherAPI weatherAPI = retrofit.create(WeatherAPI.class);
 
         Intent intent = getIntent();
         String cityName = intent.getStringExtra("cityName");
+
+        weatherCall(retrofit, cityName);
+        forecastCall(retrofit, cityName);
+    }
+
+
+    private void weatherCall(Retrofit retrofit, String cityName) {
+        WeatherAPI weatherAPI = retrofit.create(WeatherAPI.class);
         Call<WeatherResult> call = weatherAPI.getWeatherResult(cityName,
                 "metric",
                 "24174f0b2524d2bda0ad6bd18de719de");
@@ -76,15 +99,17 @@ public class WeatherScreen extends AppCompatActivity {
             @Override
             public void onResponse(Call<WeatherResult> call, Response<WeatherResult> response) {
                 tvName.setText("" + response.body().getName());
-                tvTemp.setText("" + response.body().getMain().getTemp());
+                tvCoord_lon.setText("  (" + response.body().getCoord().getLon());
+                tvCoord_lat.setText(",  " + response.body().getCoord().getLat() + ")");
+
+
+                tvTemp.setText("" + response.body().getMain().getTemp() + "˚");
                 Glide.with(WeatherScreen.this).load("http://api.openweathermap.org/img/w/"
                         +response.body().getWeather().get(0).getIcon()
                         +".png").into(ivWeather);
-                tvTemp_max.setText("" + response.body().getMain().getTempMax());
-                tvTemp_min.setText("" + response.body().getMain().getTempMin());
+                tvTemp_max.setText("" + response.body().getMain().getTempMax() + "˚");
+                tvTemp_min.setText(" / " + response.body().getMain().getTempMin() + "˚");
                 tvWeatherMain.setText(""+ response.body().getWeather().get(0).getMain());
-//                tvCoord_lat.setText("Coordinate: " + response.body().getCoord().getLat());
-//                tvCoord_lon.setText("Coordinate: " + response.body().getCoord().getLon());
             }
 
             @Override
@@ -92,7 +117,62 @@ public class WeatherScreen extends AppCompatActivity {
 //                tvPressure.setText(t.getMessage());
             }
         });
-
-
     }
+
+    private void forecastCall(Retrofit retrofit, String cityName) {
+        ForecastAPI forecastAPI = retrofit.create(ForecastAPI.class);
+        final Call<ForecastResult> forecastResultCall = forecastAPI.getForecastResult(cityName,
+                "metric",
+                "24174f0b2524d2bda0ad6bd18de719de");
+
+        forecastResultCall.enqueue(new Callback<ForecastResult>() {
+            @Override
+            public void onResponse(Call<ForecastResult> call, Response<ForecastResult> response) {
+                LineChart chart = (LineChart) findViewById(R.id.chart);
+                Double[] forecastData = new Double[5];
+                for (int i = 0; i < 5; i++){
+                    forecastData[i] = response.body().getList().get(i).getMain().getTemp();
+                }
+                createChart(chart,forecastData);
+            }
+            @Override
+            public void onFailure(Call<ForecastResult> call, Throwable t) {
+                //
+            }
+        });
+    }
+
+    private void createChart(LineChart chart, Double[] data) {
+        chart.setAutoScaleMinMaxEnabled(true);
+        chart.getDescription().setText("");
+        chart.setNoDataText("Just a moment...");
+
+        List<Entry> entries = new ArrayList<>();
+        float x = 0f;
+        for (Double eachData : data) {
+            entries.add(new Entry(x, eachData.floatValue()));
+            x++;
+        }
+        LineDataSet dataSet = new LineDataSet(entries, "Temperature");
+
+        SimpleDateFormat format = new SimpleDateFormat("E");
+        Calendar calendar = Calendar.getInstance();
+        String[] dates = new String[5];
+        for(int i = 0; i < 5;i++){
+            dates[i] = format.format(calendar.getTime());
+            calendar.add(Calendar.DATE, 1);
+        }
+
+        XAxis xAxis = chart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setGranularity(1f);
+        xAxis.setValueFormatter(new MyXAxisValueFormatter(dates));
+        chart.getAxisRight().setDrawTopYLabelEntry(false);
+        chart.getAxisRight().setDrawAxisLine(false);
+
+        LineData lineData = new LineData(dataSet);
+        chart.setData(lineData);
+        chart.invalidate();
+    }
+
 }

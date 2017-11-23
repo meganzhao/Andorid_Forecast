@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setAdapter(adapter);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAdd);
+
     }
 
     @OnClick(R.id.fabAdd)

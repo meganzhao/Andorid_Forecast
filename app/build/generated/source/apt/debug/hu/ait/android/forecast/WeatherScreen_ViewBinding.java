@@ -29,6 +29,8 @@ public class WeatherScreen_ViewBinding implements Unbinder {
     target.tvTemp_min = Utils.findRequiredViewAsType(source, R.id.tvTemp_min, "field 'tvTemp_min'", TextView.class);
     target.tvTemp_max = Utils.findRequiredViewAsType(source, R.id.tvTemp_max, "field 'tvTemp_max'", TextView.class);
     target.tvWeatherMain = Utils.findRequiredViewAsType(source, R.id.tvWeatherMain, "field 'tvWeatherMain'", TextView.class);
+    target.tvCoord_lat = Utils.findRequiredViewAsType(source, R.id.tvCoord_lat, "field 'tvCoord_lat'", TextView.class);
+    target.tvCoord_lon = Utils.findRequiredViewAsType(source, R.id.tvCoord_lon, "field 'tvCoord_lon'", TextView.class);
   }
 
   @Override
@@ -44,5 +46,7 @@ public class WeatherScreen_ViewBinding implements Unbinder {
     target.tvTemp_min = null;
     target.tvTemp_max = null;
     target.tvWeatherMain = null;
+    target.tvCoord_lat = null;
+    target.tvCoord_lon = null;
   }
 }
