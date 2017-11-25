@@ -6,33 +6,36 @@
     density="hdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1511452331559"
+    timestamp="1511635709126"
     token="1491212448269462509"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="4246" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="52" />
     <task
         name="verifier"
-        duration="0" />
+        duration="11" />
 
+    <artifact
+        location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1511451975713"
+        timestamp="1511635163239"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"
@@ -53,25 +56,36 @@
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1511452331559"
+        timestamp="1511635431403"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1511635709126"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />

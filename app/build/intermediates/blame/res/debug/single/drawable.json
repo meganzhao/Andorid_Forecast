@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/drawable/abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
@@ -38,6 +38,10 @@
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/button_transparent.xml",
+        "source": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/res/drawable/button_transparent.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",

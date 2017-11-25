@@ -33,6 +33,19 @@
         android:textSize="20sp"
         android:textColor="#ffffff" />
 
+    <Button
+        android:id="@+id/tvDetail"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/tvTemp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_transparent"
+        android:text="@string/detail"
+        android:textSize="13sp"
+        android:textColor="#616161"
+        />
+
     <TextView
         android:id="@+id/tvTemp"
         android:layout_width="wrap_content"
@@ -80,42 +93,9 @@
         android:id="@+id/chart"
         android:layout_below="@+id/tvTemp_max"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="200dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="8dp"/>
-
-
-    <TextView
-        android:id="@+id/tvPressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvHumidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tvWind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvDegree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvCloud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvRain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
 
 </RelativeLayout>

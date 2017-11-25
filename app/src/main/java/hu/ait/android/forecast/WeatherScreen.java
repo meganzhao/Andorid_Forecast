@@ -25,6 +25,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import hu.ait.android.forecast.chart.MyXAxisValueFormatter;
 import hu.ait.android.forecast.data.ForecastResult;
 import hu.ait.android.forecast.data.WeatherResult;
@@ -53,22 +54,7 @@ public class WeatherScreen extends AppCompatActivity {
     TextView tvCoord_lat;
     @BindView(R.id.tvCoord_lon)
     TextView tvCoord_lon;
-
-//    @BindView(R.id.tvPressure)
-//    TextView tvPressure;
-//    @BindView(R.id.tvHumidity)
-//    TextView tvHumidity;
-
-//    @BindView(R.id.tvWind)
-//    TextView tvWind;
-//    @BindView(R.id.tvSpeed)
-//    TextView tvSpeed;
-//    @BindView(R.id.tvDegree)
-//    TextView tvDegree;
-//    @BindView(R.id.tvCloud)
-//    TextView tvCloud;
-//    @BindView(R.id.tvRain)
-//    TextView tvRain;
+    private String cityName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,12 +66,18 @@ public class WeatherScreen extends AppCompatActivity {
                 .baseUrl("http://api.openweathermap.org")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
         Intent intent = getIntent();
-        String cityName = intent.getStringExtra("cityName");
-
+        cityName = intent.getStringExtra("cityName");
         weatherCall(retrofit, cityName);
         forecastCall(retrofit, cityName);
+
+    }
+
+    @OnClick(R.id.tvDetail)
+    void enterDetailPage(){
+        Intent detailPageIntent = new Intent(this, DetailPage.class);
+        detailPageIntent.putExtra("cityName",cityName);
+        startActivity(detailPageIntent);
     }
 
 
@@ -101,8 +93,6 @@ public class WeatherScreen extends AppCompatActivity {
                 tvName.setText("" + response.body().getName());
                 tvCoord_lon.setText("  (" + response.body().getCoord().getLon());
                 tvCoord_lat.setText(",  " + response.body().getCoord().getLat() + ")");
-
-
                 tvTemp.setText("" + response.body().getMain().getTemp() + "˚");
                 Glide.with(WeatherScreen.this).load("http://api.openweathermap.org/img/w/"
                         +response.body().getWeather().get(0).getIcon()
@@ -114,13 +104,14 @@ public class WeatherScreen extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<WeatherResult> call, Throwable t) {
-//                tvPressure.setText(t.getMessage());
+                tvName.setText(t.getMessage());
             }
         });
     }
 
     private void forecastCall(Retrofit retrofit, String cityName) {
         ForecastAPI forecastAPI = retrofit.create(ForecastAPI.class);
+        final LineChart chart = (LineChart) findViewById(R.id.chart);
         final Call<ForecastResult> forecastResultCall = forecastAPI.getForecastResult(cityName,
                 "metric",
                 "24174f0b2524d2bda0ad6bd18de719de");
@@ -128,7 +119,6 @@ public class WeatherScreen extends AppCompatActivity {
         forecastResultCall.enqueue(new Callback<ForecastResult>() {
             @Override
             public void onResponse(Call<ForecastResult> call, Response<ForecastResult> response) {
-                LineChart chart = (LineChart) findViewById(R.id.chart);
                 Double[] forecastData = new Double[5];
                 for (int i = 0; i < 5; i++){
                     forecastData[i] = response.body().getList().get(i).getMain().getTemp();
@@ -137,16 +127,16 @@ public class WeatherScreen extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<ForecastResult> call, Throwable t) {
-                //
+                chart.setNoDataText(t.getMessage());
             }
         });
     }
 
     private void createChart(LineChart chart, Double[] data) {
         chart.setAutoScaleMinMaxEnabled(true);
-        chart.getDescription().setText("");
-        chart.setNoDataText("Just a moment...");
-
+        chart.getDescription().setText("Next five day's weather");
+        chart.getDescription().setPosition(410,295);
+        chart.getDescription().setTextSize(14);
         List<Entry> entries = new ArrayList<>();
         float x = 0f;
         for (Double eachData : data) {
@@ -162,16 +152,15 @@ public class WeatherScreen extends AppCompatActivity {
             dates[i] = format.format(calendar.getTime());
             calendar.add(Calendar.DATE, 1);
         }
-
         XAxis xAxis = chart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1f);
         xAxis.setValueFormatter(new MyXAxisValueFormatter(dates));
-        chart.getAxisRight().setDrawTopYLabelEntry(false);
-        chart.getAxisRight().setDrawAxisLine(false);
 
         LineData lineData = new LineData(dataSet);
         chart.setData(lineData);
+        chart.getAxisRight().setDrawLabels(false);
+        chart.getXAxis().setDrawGridLines(false);
         chart.invalidate();
     }
 

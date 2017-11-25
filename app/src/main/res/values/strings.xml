@@ -4,4 +4,7 @@
     <string name="dislog_title">Which city\'s weather would you like to see?</string>
     <string name="dislog_positive_botton">OK</string>
     <string name="dislog_negative_button">Cancel</string>
+    <string name="drawer_close">close</string>
+    <string name="drawer_open">open</string>
+    <string name="detail">Detail</string>
 </resources>

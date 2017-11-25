@@ -3,6 +3,7 @@
     package="hu.ait.android.forecast">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".WeatherApplication"
@@ -19,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WeatherScreen"></activity>
+        <activity android:name=".WeatherScreen" />
+        <activity android:name=".DetailPage"></activity>
     </application>
 
 </manifest>

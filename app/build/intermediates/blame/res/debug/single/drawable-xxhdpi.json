@@ -2,5 +2,9 @@
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_add_white.png",
         "source": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/res/drawable-xxhdpi/ic_add_white.png"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/drawable-xxhdpi/delete.png",
+        "source": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/src/main/res/drawable-xxhdpi/delete.png"
     }
 ]

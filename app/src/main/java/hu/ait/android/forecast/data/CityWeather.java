@@ -13,11 +13,9 @@ public class CityWeather extends RealmObject {
 
     private String cityName;
 
-    public CityWeather(){
+    public CityWeather() {}
 
-    }
-
-    public CityWeather(String cityName){
+    public CityWeather(String cityName) {
         this.cityName = cityName;
     }
 
@@ -28,5 +26,8 @@ public class CityWeather extends RealmObject {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-    public String getCityWeatherID() { return cityWeatherID;}
+
+    public String getCityWeatherID() {
+        return cityWeatherID;
+    }
 }

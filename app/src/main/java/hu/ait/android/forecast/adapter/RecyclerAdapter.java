@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final CityWeather cityWeatherData = cityWeatherList.get(position);
+        final int removePosition = position;
         holder.tvCityName.setText(cityWeatherData.getCityName());
 
         holder.tvCityName.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +75,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             }
         });
 
+        holder.ivDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeAt(removePosition);
+            }
+        });
+
+    }
+
+    public void removeAt(int position){
+        CityWeather toRemoveObject = cityWeatherList.get(position);
+        realmCityWeather.beginTransaction();
+
+        toRemoveObject.deleteFromRealm();
+
+        realmCityWeather.commitTransaction();
+        cityWeatherList.remove(position);
+        notifyDataSetChanged();
     }
 
     public void addCity(String cityName){
@@ -87,6 +107,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         notifyItemInserted(cityWeatherList.size());
     }
 
+
+
     @Override
     public int getItemCount() {
         return cityWeatherList.size();
@@ -94,9 +116,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tvCityName;
+        private ImageView ivDelete;
         public ViewHolder(View itemView) {
             super(itemView);
             tvCityName = itemView.findViewById(R.id.tvCityName);
+            ivDelete = itemView.findViewById(R.id.ivDelete);
         }
     }
 }
