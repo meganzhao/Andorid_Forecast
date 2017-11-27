@@ -2,7 +2,10 @@ package hu.ait.android.forecast;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Parcelable;
+import android.support.annotation.MainThread;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +20,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +45,8 @@ public class MainActivity extends AppCompatActivity{
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private double[] coordArray;
+    private Bitmap[] bitmapArray;
+    private ArrayList<CityWeather> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +89,7 @@ public class MainActivity extends AppCompatActivity{
                                 break;
                             case R.id.nav_map:
                                 openMap();
+                                drawerLayout.closeDrawer(GravityCompat.START);
                                 break;
                             case R.id.nav_about:
                                 showSnackBarMessage();
@@ -90,20 +101,21 @@ public class MainActivity extends AppCompatActivity{
                 });
     }
 
+    int count = 0;
+    int size;
+
     private void openMap() {
+        list = adapter.getCityWeatherList();
+        size = list.size();
+        coordArray = new double[list.size()*2];
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.openweathermap.org")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        Intent overviewMapIntent = new Intent(MainActivity.this, mapActivity.class);
-        ArrayList<CityWeather> list = adapter.getCityWeatherList();
-        coordArray = new double[list.size()*2];
         for (int i = 0; i < list.size(); i++){
             weatherCall(retrofit, i, list.get(i).getCityName());
         }
-        overviewMapIntent.putParcelableArrayListExtra("list",list);
-        overviewMapIntent.putExtra("coordArray", coordArray);
-        startActivity(overviewMapIntent);
+        Thread.interrupted();
     }
 
     private void weatherCall(Retrofit retrofit, int i, String cityName) {
@@ -118,10 +130,33 @@ public class MainActivity extends AppCompatActivity{
             public void onResponse(Call<WeatherResult> call, Response<WeatherResult> response) {
                 coordArray[index*2] = response.body().getCoord().getLat();
                 coordArray[index*2+1] = response.body().getCoord().getLon();
+//                String urlString = "http://api.openweathermap.org/img/w/"
+//                        +response.body().getWeather().get(0).getIcon()
+//                        +".png";
+//                try {
+//                    URL url = new URL(urlString);
+//                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    bitmapArray[index] = bmp;
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                }
+
+                count++;
+                if (count >= size){
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent overviewMapIntent = new Intent(MainActivity.this, mapActivity.class);
+                            overviewMapIntent.putParcelableArrayListExtra("list",list);
+                            overviewMapIntent.putExtra("coordArray", coordArray);
+                            startActivity(overviewMapIntent);
+                        }
+                    });
+                }
             }
             @Override
             public void onFailure(Call<WeatherResult> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

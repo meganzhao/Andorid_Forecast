@@ -91,7 +91,6 @@ public class DetailPage extends FragmentActivity implements OnMapReadyCallback {
                         response.body().getSys().getSunrise() * 1000));
                 tvSunset.setText("Sunset: " + sdf.format(
                         response.body().getSys().getSunset() * 1000));
-
             }
 
             @Override
@@ -106,10 +105,6 @@ public class DetailPage extends FragmentActivity implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions()
                 .position(new LatLng(coord_lat, coord_lon))
                 .title(cityName));
-//        MarkerOptions a = new MarkerOptions()
-//                .position(new LatLng(50,6));
-//        Marker m = googleMap.addMarker(a);
-//        m.setPosition(new LatLng(50,5));
         googleMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(coord_lat,coord_lon) , 3.0f) );
     }
 }

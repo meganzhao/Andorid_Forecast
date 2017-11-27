@@ -140,9 +140,7 @@ public class WeatherScreen extends AppCompatActivity {
 
     private void createChart(LineChart chart, Double[] data) {
         chart.setAutoScaleMinMaxEnabled(true);
-        chart.getDescription().setText("Next five day's weather");
-        chart.getDescription().setPosition(410,295);
-        chart.getDescription().setTextSize(14);
+        chart.getDescription().setText("");
         List<Entry> entries = new ArrayList<>();
         float x = 0f;
         for (Double eachData : data) {
