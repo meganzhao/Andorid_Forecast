@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBtGabJ7fvYpYVF4h6G7OrlB0GktewoFxI" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WeatherScreen" />
-        <activity android:name=".DetailPage"></activity>
+        <activity android:name=".DetailPage" />
+        <activity android:name=".mapActivity"></activity>
     </application>
 
 </manifest>

@@ -7,4 +7,7 @@
     <string name="drawer_close">close</string>
     <string name="drawer_open">open</string>
     <string name="detail">Detail</string>
+    <string name="nav_add_city">Add a city</string>
+    <string name="nav_map">Overview Map</string>
+    <string name="nav_about">About</string>
 </resources>

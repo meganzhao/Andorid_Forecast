@@ -28,14 +28,9 @@ import io.realm.Sort;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder>
 {
-    private List<CityWeather> cityWeatherList;
+    private ArrayList<CityWeather> cityWeatherList;
     private Realm realmCityWeather;
     private Context context;
-//    int[] color_arr={Color.parseColor("#81D4FA"),Color.parseColor("#4FC3F7"),Color.parseColor("#29B6F6"),
-//            Color.parseColor("#03A9F4"),Color.parseColor("#039BE5"),Color.parseColor("#0288D1"),
-//            Color.parseColor("#0277BD"),Color.parseColor("#01579B"),Color.parseColor("#0277BD"),
-//            Color.parseColor("#0288D1"),Color.parseColor("#039BE5"),Color.parseColor("#03A9F4"),
-//            Color.parseColor("#29B6F6"),Color.parseColor("#4FC3F7"),};
     int[] color_arr={Color.parseColor("#90CAF9"),Color.parseColor("#81D4FA"),Color.parseColor("#80DEEA"),
         Color.parseColor("#4DD0E1"),Color.parseColor("#4FC3F7"),Color.parseColor("#64B5F6"),
         Color.parseColor("#26C6DA"),Color.parseColor("#29B6F6"),Color.parseColor("#42A5F5")};
@@ -46,10 +41,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         this.realmCityWeather = realmCityWeather;
         this.cityWeatherList = new ArrayList<CityWeather>();
         RealmResults<CityWeather> cityResult = realmCityWeather.where(CityWeather.class).findAll().sort("cityName", Sort.ASCENDING);
-
         for (CityWeather city: cityResult){
             cityWeatherList.add(city);
         }
+    }
+
+    public ArrayList<CityWeather> getCityWeatherList() {
+        return cityWeatherList;
     }
 
     @Override
@@ -87,9 +85,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void removeAt(int position){
         CityWeather toRemoveObject = cityWeatherList.get(position);
         realmCityWeather.beginTransaction();
-
         toRemoveObject.deleteFromRealm();
-
         realmCityWeather.commitTransaction();
         cityWeatherList.remove(position);
         notifyDataSetChanged();
@@ -102,7 +98,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         newCity.setCityName(cityName);
 
         realmCityWeather.commitTransaction();
-
         cityWeatherList.add(newCity);
         notifyItemInserted(cityWeatherList.size());
     }

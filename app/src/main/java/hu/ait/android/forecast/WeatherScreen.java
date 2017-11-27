@@ -55,6 +55,8 @@ public class WeatherScreen extends AppCompatActivity {
     @BindView(R.id.tvCoord_lon)
     TextView tvCoord_lon;
     private String cityName;
+    private double coord_lat;
+    private double coord_lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,8 @@ public class WeatherScreen extends AppCompatActivity {
     void enterDetailPage(){
         Intent detailPageIntent = new Intent(this, DetailPage.class);
         detailPageIntent.putExtra("cityName",cityName);
+        detailPageIntent.putExtra("coord_lat",coord_lat);
+        detailPageIntent.putExtra("coord_lon",coord_lon);
         startActivity(detailPageIntent);
     }
 
@@ -100,6 +104,8 @@ public class WeatherScreen extends AppCompatActivity {
                 tvTemp_max.setText("" + response.body().getMain().getTempMax() + "˚");
                 tvTemp_min.setText(" / " + response.body().getMain().getTempMin() + "˚");
                 tvWeatherMain.setText(""+ response.body().getWeather().get(0).getMain());
+                coord_lat = response.body().getCoord().getLat();
+                coord_lon = response.body().getCoord().getLon();
             }
 
             @Override

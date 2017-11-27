@@ -2,8 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_addCity"
-        android:title="Add city" />
+        android:title="@string/nav_add_city" />
+    <item
+        android:id="@+id/nav_map"
+        android:title="@string/nav_map"/>
     <item
         android:id="@+id/nav_about"
-        android:title="About" />
+        android:title="@string/nav_about" />
 </menu>

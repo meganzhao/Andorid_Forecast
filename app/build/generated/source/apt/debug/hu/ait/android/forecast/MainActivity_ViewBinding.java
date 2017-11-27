@@ -13,7 +13,7 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131558545;
+  private View view2131755265;
 
   @UiThread
   public MainActivity_ViewBinding(MainActivity target) {
@@ -26,7 +26,7 @@ public class MainActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.fabAdd, "method 'showDialog'");
-    view2131558545 = view;
+    view2131755265 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -42,7 +42,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131558545.setOnClickListener(null);
-    view2131558545 = null;
+    view2131755265.setOnClickListener(null);
+    view2131755265 = null;
   }
 }

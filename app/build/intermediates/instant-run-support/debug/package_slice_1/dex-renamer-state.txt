@@ -1,4 +1,4 @@
-#Fri Nov 24 16:31:10 CET 2017
+#Sun Nov 26 21:55:36 CET 2017
 base.0=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
 renamed.0=classes.dex
 file.0=/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex

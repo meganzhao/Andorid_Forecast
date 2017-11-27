@@ -8,12 +8,12 @@
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/anim/abc_fade_out.xml"
-    },
-    {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
         "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/zhaozhaoxia/.android/build-cache/747fb73747267fd4912eab501b1bb1f1bf876c15/output/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/Users/zhaozhaoxia/Desktop/Mobile/Forecast/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",

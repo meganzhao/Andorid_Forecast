@@ -1,11 +1,19 @@
 package hu.ait.android.forecast;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.text.SimpleDateFormat;
 
@@ -19,7 +27,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DetailPage extends AppCompatActivity {
+public class DetailPage extends FragmentActivity implements OnMapReadyCallback {
     @BindView(R.id.tvName)
     TextView tvName;
     @BindView(R.id.tvPressure)
@@ -37,23 +45,33 @@ public class DetailPage extends AppCompatActivity {
     @BindView(R.id.tvDescription)
     TextView tvDescription;
 
+    private String cityName;
+    private double coord_lat;
+    private double coord_lon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_page);
 
         ButterKnife.bind(this);
+        MapFragment mapFragment = (MapFragment) getFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.openweathermap.org")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Intent intent = getIntent();
-        String cityName = intent.getStringExtra("cityName");
+        cityName = intent.getStringExtra("cityName");
+        coord_lat = intent.getDoubleExtra("coord_lat",50.0);
+        coord_lon = intent.getDoubleExtra("coord_lon",6.0);
+
         weatherCall(retrofit, cityName);
     }
 
-    private void weatherCall(Retrofit retrofit, String cityName) {
+    private void weatherCall(Retrofit retrofit, final String cityName) {
         WeatherAPI weatherAPI = retrofit.create(WeatherAPI.class);
         Call<WeatherResult> call = weatherAPI.getWeatherResult(cityName,
                 "metric",
@@ -73,6 +91,7 @@ public class DetailPage extends AppCompatActivity {
                         response.body().getSys().getSunrise() * 1000));
                 tvSunset.setText("Sunset: " + sdf.format(
                         response.body().getSys().getSunset() * 1000));
+
             }
 
             @Override
@@ -82,4 +101,15 @@ public class DetailPage extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(coord_lat, coord_lon))
+                .title(cityName));
+//        MarkerOptions a = new MarkerOptions()
+//                .position(new LatLng(50,6));
+//        Marker m = googleMap.addMarker(a);
+//        m.setPosition(new LatLng(50,5));
+        googleMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(coord_lat,coord_lon) , 3.0f) );
+    }
 }

@@ -15,7 +15,7 @@ import java.lang.Override;
 public class WeatherScreen_ViewBinding implements Unbinder {
   private WeatherScreen target;
 
-  private View view2131558535;
+  private View view2131755219;
 
   @UiThread
   public WeatherScreen_ViewBinding(WeatherScreen target) {
@@ -36,7 +36,7 @@ public class WeatherScreen_ViewBinding implements Unbinder {
     target.tvCoord_lat = Utils.findRequiredViewAsType(source, R.id.tvCoord_lat, "field 'tvCoord_lat'", TextView.class);
     target.tvCoord_lon = Utils.findRequiredViewAsType(source, R.id.tvCoord_lon, "field 'tvCoord_lon'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tvDetail, "method 'enterDetailPage'");
-    view2131558535 = view;
+    view2131755219 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,7 +61,7 @@ public class WeatherScreen_ViewBinding implements Unbinder {
     target.tvCoord_lat = null;
     target.tvCoord_lon = null;
 
-    view2131558535.setOnClickListener(null);
-    view2131558535 = null;
+    view2131755219.setOnClickListener(null);
+    view2131755219 = null;
   }
 }
