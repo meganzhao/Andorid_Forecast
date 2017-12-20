@@ -26,8 +26,5 @@ Start Android studio and Import Project
 
 
 ## App Demo
-![Alt text](img-demo/img1.png?raw=true "")
-![Alt text](img-demo/img2.png?raw=true "")
-![Alt text](img-demo/img3.png?raw=true "")
-![Alt text](img-demo/img4.png?raw=true "")
+<img src="img-demo/img1.png" width="288px" height="570px"/><img src="img-demo/img2.png" width="288px" height="570px"/><img src="img-demo/img3.png" width="288px" height="570px"><img src="img-demo/img4.png" width="288px" height="570px">
 
