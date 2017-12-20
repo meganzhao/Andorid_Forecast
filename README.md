@@ -30,3 +30,5 @@ Start Android studio and Import Project
 
 <img src="img-demo/img3.png" width="340px" height="570px">     <img src="img-demo/img4.png" width="340px" height="570px">
 
+## Acknowledgments
+Weather API: https://openweathermap.org/
